@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thyroid Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input[type="text"], form select, form input[type="checkbox"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="/predict" method="post">
+        <label for="age">What is your age?</label>
+        <input type="text" name="age"><br>
+        
+        <label for="sex">Male or female?</label>
+        <select name="sex">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+
+
+        <label for="on_thyroxine">Are you currently taking levothyroxine (thyroxine)?</label>
+        <select name="on_thyroxine">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+        
+        
+        <label for="query_thyroxine">Do you have query related to thyroxine treatment?</label>
+        <select name="query_thyroxine">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+        
+        
+        <label for="antithyroid_medication">Are you on your antithyroid medication?</label>
+        <select name="antithyroid_medication">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+        
+        
+
+        
+        
+        <label for="pregnant">Are you currently pregnant?</label>
+        <select name="pregnant">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+ 
+        
+        <label for="thyroid_surgery">Have you undergone thyroid related surgery?</label>
+        <select name="thyroid_surgery">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+        
+       
+        <label for="I131_treatment">Have you undergone treatment with radioactive iodine (I131)?</label>
+        <select name="I131_treatment">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+
+        
+        <label for="query_hypothyroid">Have you been diagnosed with hypothyroidism or hyperthyroidism?</label>
+        <select name="query_hypothyroid">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+        
+        
+        <label for="lithium">Are you on any lithium medication?</label>
+        <select name="lithium">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+       
+
+        <label for="hypopituitary">Have you been diagnosed with hypopituitarism?</label>
+        <select name="hypopituitary">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+
+        <label for="goitre">Have you ever been diagnosed with a goiter (enlarged thyroid gland)?</label>
+        <select name="goitre">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+        
+        
+        <label for="tumor">Have you ever been diagnosed with a thyroid tumor?</label>
+        <select name="tumor">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+    
+
+        <label for="psych">Have you ever been diagnosed with a psychiatric disorder?</label>
+        <select name="psych">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+       
+        
+       
+        <label for="sick">Have you been feeling unwell lately?</label>
+        <select name="sick">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select><br>
+        
+
+        <label for="T3">How much is your T3 (thyroid hormone level)?</label>
+        <input type="text" name="T3"><br>
+        
+        <label for="TT4">How much is your TT4 (thyroid hormone level)?</label>
+        <input type="text" name="TT4"><br>
+        
+        <label for="T4U">How much is your T4U (thyroid hormone level)?</label>
+        <input type="text" name="T4U"><br>
+        
+        <label for="FTI">How much is your FTI?</label>
+        <input type="text" name="FTI"><br>
+        
+        
+        
+        
+        
+        
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>
